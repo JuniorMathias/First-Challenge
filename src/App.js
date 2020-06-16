@@ -8,7 +8,7 @@ class App extends Component {
           <span> junior</span>
         </Title>
         
-         <Titulo> Hello </Titulo>
+         <Titulo> Hello  junior</Titulo>
       </div>
     )
   }
