@@ -1,18 +1,25 @@
-import React, { Component } from "react";
-import { Title, Titulo } from "./styles";
-class App extends Component { 
+import React, {Component} from 'react';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Home from "./components/Home";
+import Login from "./components/Login";
+
+
+
+
+class App extends Component{
   render(){
     return(
-      <div>
-        <Title>Hello World
-          <span> junior</span>
-        </Title>
-        
-         <Titulo> está funcionando de novo ok de novo 
-           
-         </Titulo>
-      </div>
+       
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/login" component={Login}/>
+
+        </Switch>
+      </BrowserRouter>
+       
     )
   }
 }
+
 export default App;
