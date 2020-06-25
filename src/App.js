@@ -6,11 +6,12 @@ import Login from "./components/Login";
 
 
 
+
 class App extends Component{
   render(){
     return(
-       
-      <BrowserRouter>
+      
+       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/login" component={Login}/>
@@ -18,6 +19,8 @@ class App extends Component{
         </Switch>
       </BrowserRouter>
        
+      
+      
     )
   }
 }
