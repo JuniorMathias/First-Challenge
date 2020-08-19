@@ -31,7 +31,6 @@ validate = () => {
     
     if(!this.state.email.includes("@")){
         emailError = "Invalid email";
-        this.setState({color: "red",})
     }
     if(!this.state.password){
         passError = "Passoword cannot be blank";
@@ -65,7 +64,7 @@ validate = () => {
                 
                 <input type="email" autoComplete="off" autoFocus value={this.state.email}
                     onChange={(e) => this.setState({email: e.target.value})} placeholder="E-mail"
-                    style={inputStyle} id="email" />
+                    style={{border: this.state.emailError ? '1px solid red' : '1px solid blue'}} id="email" />
                  
                  <div style={{fontSize: 12, color: "red"}}> {this.state.emailError}  </div>
                
