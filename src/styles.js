@@ -13,21 +13,32 @@ export const Container = styled.div`
     flex-direction:row;
     margin: auto;
     border: 1px solid #000000;
+   
 `;
 export const Nav = styled.nav` 
    width:30%;
    height:600px;
-   background-image: linear-gradient(to top, #025D95 ,#02998C );
+   background: linear-gradient(to top, #025D95 ,#02998C );
    display:inline-block;
    color:white;
 `;
 
 
+
 export const Middle = styled.div` 
     width:100%;  
+    height: 100%;
+    background-image: url(${({ background }) => background});
+    background-repeat: no-repeat;
+    background-size: 800px 700px;
+    
 `;
 export const Parag = styled.p` 
-    text-align:center;
+   text-align:center;
+   height:600px;
+   background-image: url(${({ background }) => background});
+   background-repeat: no-repeat;
+   background-size: 100px 100px;
     
 `;
 

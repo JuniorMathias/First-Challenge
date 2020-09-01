@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Link, withRouter, Redirect} from 'react-router-dom';
-import { Botao, Hlogin, Formu ,Nav,Container,Middle,Parag, } from "../../styles";
+import { All,Botao, Hlogin, Formu ,Nav,Container,Middle,Parag} from "../../styles";
+import reactbg from "../img/bgblue.jpg";
+import reactnav from "../img/peopletalking.png"
 import './login.css';
 
 class Login extends Component{
@@ -46,16 +48,17 @@ validate = () => {
         
 
     render(){
-        let inputStyle = { border: '1px solid #DDD'};
+        
 
     return (
        
            <div >
+               
                <Container>  
 
-                   <Nav> <Parag> Group Discussions </Parag>  </Nav>
+                   <Nav > <Parag background={reactnav}> Group Discussions </Parag>  </Nav>
 
-               <Middle> 
+               <Middle background={reactbg}> 
                 
                <Formu><form onSubmit={this.entrar} id="login">
 
@@ -64,13 +67,14 @@ validate = () => {
                 
                 <input type="email" autoComplete="off" autoFocus value={this.state.email}
                     onChange={(e) => this.setState({email: e.target.value})} placeholder="E-mail"
-                    style={{border: this.state.emailError ? '1px solid red' : '1px solid blue'}} id="email" />
+                    style={{border: this.state.emailError ? '1px solid red' : '1px solid #ddd'}} />
                  
                  <div style={{fontSize: 12, color: "red"}}> {this.state.emailError}  </div>
                
               
                 <input type="password" autoComplete="off" autoFocus value={this.state.password}
-                    onChange={(e) => this.setState({password: e.target.value})} placeholder="Password"/>
+                    onChange={(e) => this.setState({password: e.target.value})} placeholder="Password"
+                    style={{border: this.state.passError ? '1px solid red' : '1px solid #ddd'}}/>
                   
                 <div style={{fontSize: 12, color: "red"}}> {this.state.passError}  </div> 
               
@@ -82,6 +86,7 @@ validate = () => {
                 </form> </Formu> 
                 
                 </Middle></Container>
+               
             </div>
         )
     }
