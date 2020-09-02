@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link, withRouter, Redirect} from 'react-router-dom';
-import { All,Botao, Hlogin, Formu ,Nav,Container,Middle,Parag} from "../../styles";
-import reactbg from "../img/bgblue.jpg";
+import { Txtnav, Botao, Hlogin, Formu ,Nav,Container,Middle,Parag} from "../../styles";
+import reactbg from "../img/bgboth.png";
 import reactnav from "../img/peopletalking.png"
 import './login.css';
 
@@ -51,15 +51,20 @@ validate = () => {
         
 
     return (
-       
+         
            <div >
-               
+            
                <Container>  
-
-                   <Nav > <Parag background={reactnav}> Group Discussions </Parag>  </Nav>
+{/* -----------------  PART OF NAV ----------- */}
+                   <Nav > 
+           
+                <Parag background={reactnav}>  <Txtnav >  
+               Group Discussions </Txtnav>  </Parag> 
+                   </Nav>
 
                <Middle background={reactbg}> 
-                
+
+{/*------------------------- PART OF FORM ---------------  */}
                <Formu><form onSubmit={this.entrar} id="login">
 
                 <Hlogin> Holla, Amigo! </Hlogin>
@@ -86,8 +91,10 @@ validate = () => {
                 </form> </Formu> 
                 
                 </Middle></Container>
+
                
-            </div>
+               
+            </div> 
         )
     }
 }

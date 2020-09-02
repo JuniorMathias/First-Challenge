@@ -7,38 +7,48 @@ import styled from "styled-components";
 
 export const Container = styled.div`  
     
-    width:1200px;
-    height:600px;
+    width:80%;
+    height:100%;
     display:flex;
     flex-direction:row;
     margin: auto;
-    border: 1px solid #000000;
+    border: 1px solid #ddd;
    
 `;
+// --- NAV
 export const Nav = styled.nav` 
    width:30%;
    height:600px;
    background: linear-gradient(to top, #025D95 ,#02998C );
    display:inline-block;
-   color:white;
+   
+`;
+export const Parag = styled.p` 
+
+   height:100%;
+   background-image: url(${({ background }) => background});
+   background-repeat: no-repeat;
+   background-size: 100px ;
+    
 `;
 
 
+export const Txtnav = styled.p` 
+    font-size: 30px;
+     text-align:center;
+     margin-top:150%;
+     color:white;
+`  
+
+// OUT OF THE FORM AND IN OF CONTAINER 
 
 export const Middle = styled.div` 
     width:100%;  
-    height: 100%;
+    height: 600px;
     background-image: url(${({ background }) => background});
     background-repeat: no-repeat;
-    background-size: 800px 700px;
-    
-`;
-export const Parag = styled.p` 
-   text-align:center;
-   height:600px;
-   background-image: url(${({ background }) => background});
-   background-repeat: no-repeat;
-   background-size: 100px 100px;
+    background-size: cover;
+    background-color: white;
     
 `;
 
@@ -81,10 +91,6 @@ a {
 
 `;
 
-
-
-
-
 export const Botao = styled.button`
     
     width:382px; 
@@ -97,7 +103,5 @@ export const Botao = styled.button`
     cursor: pointer; 
     
 `;
-
-
 
 
